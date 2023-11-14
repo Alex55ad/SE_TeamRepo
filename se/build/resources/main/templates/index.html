@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Project for SE laboratory</title>
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">youtube.com</a>
+    </nav>
+
+    <main role = "main" class = "container">
+        <div class = "start-div">
+            <h1>Spring + Thymeleaf Hello World</h1>
+            <h2>
+                <span th:text="'Hello' + ${message}"></span>
+            </h2>
+
+            <form action="#" th:action="@{/greet}" method="post">
+                <label for="name">Enter Name:</label>
+                <input type="text" id="name" name="name" required>
+                <button type="submit">Say Hello</button>
+            </form>
+            <br>
+            <form action="#" th:action="@{/reset}" method="post">
+                <button type="submit">Reset</button>
+            </form>
+        </div>
+    </main>
+
+    <script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+
+</body>
+
+
+</html>
